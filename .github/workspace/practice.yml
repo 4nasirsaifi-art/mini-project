@@ -1,0 +1,16 @@
+name: simple docker build
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest      
+
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v4
+
+      - name: build-image
+        uses: docker build -t my-app:latest .      
