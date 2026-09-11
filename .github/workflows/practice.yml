@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: build-image
-        uses: docker build -t my-app:latest .      
+        run: docker build -t my-app:latest .      
